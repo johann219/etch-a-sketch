@@ -75,7 +75,11 @@ btnDarken.addEventListener('click', () => {
 document.body.addEventListener ('mouseover', (e) => {
   let box = e.target.closest('.box');
   if(!box) { return; }
-  box.style.backgroundColor = 'lightblue';
+  if (flagMode === "Normal") {
+    box.style.backgroundColor = 'lightblue';
+  } else if (flagMode === "Random") {
+    box.style.backgroundColor = randomizeColor();
+  }
 });
 
 const btn = document.querySelector('.btn');
