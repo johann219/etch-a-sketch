@@ -48,7 +48,7 @@ btnNormal.addEventListener('click', () => {
     currentMode.textContent = 'CURRENT MODE: NORMAL';
     alert('Mode successfully changed to Normal');
   } else {
-    alert('Mode is already normal');
+    alert('Mode is already Normal');
   }
 });
 
@@ -58,7 +58,7 @@ btnRandom.addEventListener('click', () => {
     currentMode.textContent = 'CURRENT MODE: RANDOM';
     alert('Mode successfully changed to Random');
   } else {
-    alert('Mode is already normal');
+    alert('Mode is already Random');
   }
 });
 
@@ -68,7 +68,7 @@ btnDarken.addEventListener('click', () => {
     currentMode.textContent = 'CURRENT MODE: DARKEN';
     alert('Mode successfully changed to Darken');
   } else {
-    alert('Mode is already normal');
+    alert('Mode is already Darken');
   }
 });
 
