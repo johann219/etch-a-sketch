@@ -16,3 +16,9 @@ for (let i = 0; i < 16; ++i) {
 
   container.appendChild(row);
 }
+
+document.body.addEventListener ('mouseover', (e) => {
+  let box = e.target.closest('.box');
+  if(!box) { return; }
+  box.style.backgroundColor = "lightblue";
+});
