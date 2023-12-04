@@ -2,6 +2,8 @@ const container = document.querySelector(".container");
 
 const FIELD_WIDTH = 960;
 
+let flagMode = "normal";
+
 function randomizeNumberRGB () {
   return Math.floor(Math.random() * 266);
 }
