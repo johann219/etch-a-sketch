@@ -4,6 +4,12 @@
   width: 960px;
   height: 960px;
   border: 1px solid red;
+  margin: auto;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
 }
 
 .box {
@@ -23,4 +29,11 @@
 
 .row {
   display: flex;
+}
+
+.btn {
+  font-size: 40px;
+  font-weight: 700;
+  width: 400px;
+  margin-bottom: 20px;
 }
