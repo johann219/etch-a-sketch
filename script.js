@@ -1,6 +1,10 @@
 const container = document.querySelector(".container");
 
+const FIELD_WIDTH = 960;
+
 function drawGrid (side = 16) {
+  let boxSide = 960/side;
+
   for (let i = 0; i < side; ++i) {
     const row = document.createElement('div');
     row.className = "row";
@@ -8,6 +12,8 @@ function drawGrid (side = 16) {
     for (let j = 0; j < side; ++j) {
       const rowElement = document.createElement('div');
       rowElement.className = "box";
+      rowElement.style.width = boxSide + "px";
+      rowElement.style.height = boxSide + "px";
       if (j === side - 1) {rowElement.classList.add("last-column");}
       if (i === side - 1) {rowElement.classList.add("last-row");}
       row.appendChild(rowElement);
