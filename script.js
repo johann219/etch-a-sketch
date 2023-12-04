@@ -2,6 +2,18 @@ const container = document.querySelector(".container");
 
 const FIELD_WIDTH = 960;
 
+function randomizeNumberRGB () {
+  return Math.floor(Math.random() * 266);
+}
+
+function randomizeColor () {
+  let r = randomizeNumberRGB();
+  let g = randomizeNumberRGB();
+  let b = randomizeNumberRGB();
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 function drawGrid (side = 16) {
   let boxSide = 960/side;
 
@@ -22,12 +34,12 @@ function drawGrid (side = 16) {
     container.appendChild(row);
   }
 }
+
 document.body.addEventListener ('mouseover', (e) => {
   let box = e.target.closest('.box');
   if(!box) { return; }
   box.style.backgroundColor = "lightblue";
 });
-
 
 const btn = document.querySelector(".btn");
 btn.addEventListener('click', () => {
