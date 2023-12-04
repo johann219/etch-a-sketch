@@ -1,16 +1,16 @@
 const container = document.querySelector(".container");
 
-for (let i = 0; i < 16; ++i) {
+let input = 16;
+
+for (let i = 0; i < input; ++i) {
   const row = document.createElement('div');
   row.className = "row";
 
-  for (let j = 0; j < 16; ++j) {
+  for (let j = 0; j < input; ++j) {
     const rowElement = document.createElement('div');
-    // rowElement.style.width = "40px";
-    // rowElement.style.height = "40px";
-    // rowElement.style.border = "1px solid black";
     rowElement.className = "box";
-
+    if (j === input - 1) {rowElement.classList.add("last-column");}
+    if (i === input - 1) {rowElement.classList.add("last-row");}
     row.appendChild(rowElement);
   }
 

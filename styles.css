@@ -1,16 +1,26 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  width: 960px;
+  height: 960px;
+  border: 1px solid red;
 }
 
 .box {
   width: 40px;
   height: 40px;
-  border: 1px solid black;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.last-column {
+  border-right: 1px solid black;
+}
+
+.last-row {
+  border-bottom: 1px solid black;
 }
 
 .row {
   display: flex;
-  gap: 2px;
 }
