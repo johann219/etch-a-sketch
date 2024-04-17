@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+.grid__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid__row {
+  display: flex;
+}
+
+.grid__cell {
+  border-bottom: 1px solid rgb(127, 127, 127);
+  border-right: 1px solid rgb(127, 127, 127);
+}
+
+.grid__row--topmost {
+  border-top: 1px solid rgb(127, 127, 127);
+}
+
+.grid__column--leftmost {
+  border-left: 1px solid rgb(127, 127, 127);
+}
+
+.settings__container {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.settings__caption {
+  font-size: 48px;
+}
+
+.settings__input {
+  font-size: 24px;
+}
+.grid__control {
+  font-size: 24px;
+}
