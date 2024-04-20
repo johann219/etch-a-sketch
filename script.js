@@ -4,8 +4,8 @@ const RANDOM_COLOR_MAX = 255;
 
 const gridCellTemplateElement = document.querySelector('#grid__cell').content.querySelector('div');
 const gridContainerElement = document.querySelector('.grid__container');
-
-gridCellTemplateElement.innerHTML = '';
+const gridResizeInputElement = document.querySelector('.grid__control');
+const gridResizeForm = document.querySelector('.grid__form');
 
 const getRandomInteger = (min, max) => {
   min = Math.ceil(min);
@@ -25,10 +25,11 @@ const colorElementRandom = (element, color) => {
   element.style.backgroundColor = color;
 };
 
-
 const calculateCellSide = (cellAmount) => GRID_SIZE / cellAmount;
 
 const createGrid = (cellAmount) => {
+  gridContainerElement.innerHTML = '';
+
   for(let i = 0; i < cellAmount; i++) {
     const gridRowElement = document.createElement('div');
     gridRowElement.classList.add('grid__row');
@@ -53,10 +54,16 @@ const createGrid = (cellAmount) => {
   }
 };
 
-createGrid(6);
+createGrid(16);
 
 gridContainerElement.addEventListener('mouseover', (evt) => {
   if (evt.target.closest('.grid__cell')) {
     colorElementRandom(evt.target, getRandomColor());
   }
+});
+
+gridResizeForm.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  createGrid(gridResizeInputElement.value);
+  gridResizeForm.reset();
 });
