@@ -33,7 +33,7 @@ const createGrid = (cellAmount) => {
   for(let i = 0; i < cellAmount; i++) {
     const gridRowElement = document.createElement('div');
     gridRowElement.classList.add('grid__row');
-    
+
     for(let j = 0; j < cellAmount; j++) {
       const gridCellElement = gridCellTemplateElement.cloneNode(true);
       const cellSide = calculateCellSide(cellAmount);
@@ -56,11 +56,13 @@ const createGrid = (cellAmount) => {
 
 createGrid(16);
 
-gridContainerElement.addEventListener('mouseover', (evt) => {
+const onMouseOverRandom = (evt) => {
   if (evt.target.closest('.grid__cell')) {
     colorElementRandom(evt.target, getRandomColor());
   }
-});
+};
+
+gridContainerElement.addEventListener('mouseover', onMouseOverRandom);
 
 gridResizeForm.addEventListener('submit', (evt) => {
   evt.preventDefault();
